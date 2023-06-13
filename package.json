@@ -24,6 +24,7 @@
   "homepage": "https://github.com/firsenkowork/MebelGroup#readme",
   "devDependencies": {
     "browser-sync": "^2.29.1",
+    "cssmin": "^0.4.3",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
