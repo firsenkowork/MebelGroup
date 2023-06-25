@@ -22,6 +22,7 @@ $(function () {
     header.classList.toggle("sticky", window.scrollY > 0)
   })
 
+
   // Slider
   $(".slider__inner").slick({
     dots: true,
@@ -29,5 +30,13 @@ $(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     // autoplay: true
+  });
+
+  // Load More
+  $('#loadMore').click(function () {
+    $('#boxs .box:hidden').slice(0, 4).slideDown()
+      if (($('#boxs .box:hidden')).length == 0) {
+      $('#loadMore').fadeOut('slow')
+    }
   });
 });
