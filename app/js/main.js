@@ -32,6 +32,7 @@ $(function () {
     // autoplay: true
   });
 
+
   // Load More
   $('#loadMore').click(function () {
     $('#boxs .box:hidden').slice(0, 4).slideDown()
@@ -39,4 +40,16 @@ $(function () {
       $('#loadMore').fadeOut('slow')
     }
   });
+
+
+  // Collections Slider
+  $(".collections__inner").slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+  });
+
+
 });
