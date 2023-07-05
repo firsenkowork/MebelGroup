@@ -446,7 +446,8 @@
 
 // SALES LEADERS//////////////////////////////////////////////////////////////////////
 
-.sales-leaders {
+.sales-leaders,
+.new-items {
   padding: 100px 0px;
 
   &__title {
@@ -471,7 +472,8 @@
     transition: all 0.3s;
     
     // Обращаемся только к нижнему блоку
-    & .sales-leaders__hidden {
+    & .sales-leaders__hidden,
+    & .new-items__hidden {
       opacity: 0;
       transition: all 0.3s;
     }
@@ -592,15 +594,12 @@
 
 
 
-
-
-
-
-  // КАРТОЧКА: 
+  // КАРТОЧКА:
   &__inner:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 
-    & .sales-leaders__hidden {
+    & .sales-leaders__hidden,
+    & .new-items__hidden {
       opacity: 1;
     }
   }
@@ -633,7 +632,8 @@
     background-color: $text;
   }
 
-  &__loadMore {
+  &__loadMore,
+  &__newItemsLoadMore {
     font-size: 14px;
     line-height: 1.715;
     @include f600;
@@ -650,7 +650,8 @@
     cursor: pointer;
   }
 
-  &__loadMore::after {
+  &__loadMore::after,
+  &__newItemsLoadMore::after {
     content: '+';
     position: absolute;
     padding-left: 20px;
@@ -659,13 +660,18 @@
     transform: translateY(-50%);
   }
 
-  &__loadMore:hover {
+  &__loadMore:hover,
+  &__newItemsLoadMore:hover {
     border: 1px solid $text;
   }
 
 }
 // Количество карточек до нажатия кнопки Load More
 #boxs .box:nth-child(n + 4) {
+  display: none;
+}
+
+#newBoxs .newBox:nth-child(n + 4) {
   display: none;
 }
 
@@ -692,8 +698,6 @@
 //////////////////////////////// Collections /////////////////////////////////////
 
 .collections {
-  padding-bottom: 150px;
-
   &__mainTitle {
     margin-bottom: 20px;
   }
